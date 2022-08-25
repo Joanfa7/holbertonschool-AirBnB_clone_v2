@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#create a tgz file
+# create a tgz file
 import os.path
 from fabric.api import local
 from datetime import datetime
@@ -14,5 +14,5 @@ def do_pack():
     try:
         local("tar -cvzf {} web_static".format(fileName))
         return fileName
-    except:
+    except None:
         return None
