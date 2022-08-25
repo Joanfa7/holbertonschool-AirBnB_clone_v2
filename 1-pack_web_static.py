@@ -10,9 +10,9 @@ def do_pack():
     dt = datetime.now().strftime("%Y%m%d%H%M%S")
     fileName = "versions/web_static_{}.tgz".format(dt)
     if os.path.isdir("versions") is False:
-        local("mkdir version")
+        local("mkdir versions")
     try:
-        local("tar -cvzf {} web_static".format(tgzname))
-        return tgzname
+        local("tar -cvzf {} web_static".format(fileName))
+        return fileName
     except:
         return None
