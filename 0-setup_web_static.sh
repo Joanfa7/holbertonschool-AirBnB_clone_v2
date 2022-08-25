@@ -5,9 +5,8 @@ sudo apt-get update -y
 sudo apt-get install nginx -y
 ufw allow 'Nginx HTTP'
 
-sudo mkdir -p  /data/web_static/releases/
-sudo mkdir /data/web_static/shared/
-sudo mkdir /data/web_static/releases/test/
+sudo mkdir -p  /data/web_static/releases/test
+sudo mkdir -p  /data/web_static/shared/
 sudo ln -sf /data/web_static/current /data/web_static/releases/test/
 sudo echo "Hello World" > /data/web_static/releases/test/index.html
 sudo chown -hR ubuntu:ubuntu /data/
