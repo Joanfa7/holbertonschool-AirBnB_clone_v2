@@ -37,7 +37,7 @@ def num(n):
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
-def num(n):
+def numbr(n):
     ''' return a digit '''
     return "{:d} is a number".format(n)
 
