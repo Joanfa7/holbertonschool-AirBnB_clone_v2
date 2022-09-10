@@ -31,10 +31,15 @@ def python(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 
-@app.route("/number", strict_slashes=False)
 @app.route("/number/<n>", strict_slashes=False)
 def num(n):
     return "{} is a number".format(n.is_integer())
+
+
+@app.route("/number/<int:n>", strict_slashes=False)
+def num(n):
+    ''' return a digit '''
+    return "{:d} is a number".format(n)
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
