@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Flask App'''
 
+for flask import render_template
 from flask import Flask
 
 app = Flask(__name__)
